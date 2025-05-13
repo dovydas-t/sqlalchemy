@@ -13,6 +13,7 @@ class Employee(Base):
     position = Column(String(25))
     salary = Column(Integer)
     hire_date = Column(Date, default=func.current_date())
+    age = Column(Integer, default=18)
 
      # Foreign key to link to the Employer (one-to-many)
     employer_id = Column(Integer, ForeignKey('employers.id'))
