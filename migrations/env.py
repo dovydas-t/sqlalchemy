@@ -24,6 +24,7 @@ from models.employer import Employer
 from models.employee_role import EmployeeRole
 from models.location import Location
 from models.project import Project
+from models.street import Street
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,

@@ -13,3 +13,6 @@ class Location(Base):
 
     # One-to-many: one location -> many projects
     projects = relationship('Project', back_populates='location')
+
+    # One-to-many: one location -> many streets
+    streets = relationship('Street', back_populates='location')
