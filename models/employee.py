@@ -1,6 +1,6 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Date, func
 from sqlalchemy.orm import relationship
-from database.db_connection import Base
+from models.base import Base
 
 # Lentele
 class Employee(Base):

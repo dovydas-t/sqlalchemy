@@ -1,5 +1,5 @@
 from sqlalchemy import Table, Column, Integer, ForeignKey
-from database.db_connection import Base
+from models.base import Base
 
 employee_role_association = Table(
     'employee_role_association', Base.metadata,

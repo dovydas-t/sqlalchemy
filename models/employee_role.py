@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from database.db_connection import Base
+from models.base import Base
 
 class EmployeeRole(Base):
     __tablename__ = 'employee_roles'

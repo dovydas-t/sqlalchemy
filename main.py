@@ -1,5 +1,4 @@
 from controller.controller import run as controller
-from database import init_db
 
 def run():
     controller()

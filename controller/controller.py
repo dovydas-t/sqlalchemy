@@ -13,7 +13,6 @@ from inputs.inputs import get_employer_data
 from database.crud import create_employee, get_all_employees, get_employee_by_id, update_employee, delete_employee
 from database.crud import create_employer, get_all_employers, assign_employee_to_employer, get_employees_by_employer_id
 from database.crud import remove_employee_from_employer, get_employed_employees
-from database.init_db import refresh_db, restart_db
 
 def run():
     while True:
@@ -121,16 +120,6 @@ def run():
                         show_employed_employees(employed_employees)
                     else:
                         print("\nNo employed employees found.")
-
-            case '98':
-                restart_db()
-                print("Database restarted successfully.")
-
-
-            case '99':
-                print("\nCreating employer.id for employees...")
-                refresh_db()
-                print("Database refreshed successfully.")
 
 
             case '0':
