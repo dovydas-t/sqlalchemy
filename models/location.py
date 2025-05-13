@@ -10,3 +10,6 @@ class Location(Base):
 
     # One-to-many: one location -> many employers
     employers = relationship('Employer', back_populates='location')
+
+    # One-to-many: one location -> many projects
+    projects = relationship('Project', back_populates='location')

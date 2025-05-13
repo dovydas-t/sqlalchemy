@@ -23,6 +23,7 @@ from models.employee import Employee
 from models.employer import Employer
 from models.employee_role import EmployeeRole
 from models.location import Location
+from models.project import Project
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,

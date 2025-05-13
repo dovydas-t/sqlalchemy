@@ -9,6 +9,7 @@ class Employer(Base):
     name = Column(String(100), nullable=False)
     
     location_id = Column(Integer, ForeignKey('locations.id'))
+    project_id = Column(Integer, ForeignKey('projects.id'))
     
     # One-to-many relationship: An Employer has many Employees
     employees = relationship('Employee', back_populates='employer')

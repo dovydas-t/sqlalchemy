@@ -18,6 +18,10 @@ class Employee(Base):
      # Foreign key to link to the Employer (one-to-many)
     employer_id = Column(Integer, ForeignKey('employers.id'))
 
+    # Foreign key to link to the Project (one-to-many)
+    project_id = Column(Integer, ForeignKey('projects.id'))
+
+
     # Relationship to Employer (one employee belongs to one employer)
     employer = relationship('Employer', back_populates='employees')
 
