@@ -2,6 +2,8 @@ from sqlalchemy import Column, ForeignKey, Integer, String, Date, func
 from sqlalchemy.orm import relationship
 from models.base import Base
 
+from models.employee_role_association import employee_role_association
+
 # Lentele
 class Employee(Base):
     __tablename__ = 'darbuotojai'
@@ -25,8 +27,10 @@ class Employee(Base):
     # Relationship to Employer (one employee belongs to one employer)
     employer = relationship('Employer', back_populates='employees')
 
-    # Many-to-many relationship with Role
-    roles = relationship('Role', secondary='employee_role_association', back_populates='employees')
+    # Many-to-many relationship with EmployeeRole
+    roles = relationship('EmployeeRole', secondary='employee_role_association', back_populates='employees')
+
+
 
     def __repr__(self):
         return (

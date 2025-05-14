@@ -6,7 +6,7 @@ class Location(Base):
     __tablename__ = 'locations'
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(100), nullable=False)
+    name = Column(String(100), nullable=True)
 
     # One-to-many: one location -> many employers
     employers = relationship('Employer', back_populates='location')
